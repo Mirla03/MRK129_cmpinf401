@@ -1,2 +1,2 @@
-module mrk129_lab5 {
+module mrk129_MenuManager {
 }

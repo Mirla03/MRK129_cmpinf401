@@ -1,5 +1,9 @@
 package mrk129_MenuManager;
-
+/**
+ * Class Entree
+ * Author : Mridula Kanakavelan
+ * created: 10/14/2022
+ */
 public class Entree {
 	
 	String name;

@@ -1,5 +1,11 @@
 package mrk129_MenuManager;
 
+/**
+ * Class Side
+ * Author : Mridula Kanakavelan
+ * created: 10/14/2022
+ */
+
 public class Side {
 
 	String name;

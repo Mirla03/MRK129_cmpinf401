@@ -1,5 +1,9 @@
 package mrk129_MenuManager;
-
+/**
+ * Class Menu
+ * Author : Mridula Kanakavelan
+ * created: 10/14/2022
+ */
 public class Menu {
 
 	String name;

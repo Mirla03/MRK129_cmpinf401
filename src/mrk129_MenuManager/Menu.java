@@ -1,148 +1,155 @@
 package mrk129_MenuManager;
 /**
  * Class Menu
- * Author : Mridula Kanakavelan
- * created: 10/14/2022
+ * @author mridulakanakavelan
+ * @created:11/1/2022
  */
 public class Menu {
 
-	String name;
+	private String name; 
+	private Entree entree; 
+	private Side side; 
+	private Salad salad; 
+	private Dessert dessert; 
 	
-	Entree entree;
+	public Menu(String name) {
+		this.name = name; 
+		//this.entree = null; 
+		//this.dessert = null; 
+		//this.salad = null; 
+		//this.side = null; 
+	}
 	
-	Side side;
-	
-	Salad salad;
-	
-	Dessert dessert;
-	
-	public Menu (String name, Entree entree, Salad salad) {
-		
-		this.name = name;
-		
-		this.entree = entree;
-		
-		this.side = null;
-		
-		this.salad = salad;
-		
+	public Menu(String name, Entree entree, Salad salad) {
+		this.name = name; 
+		this.entree = entree; 
+		this.salad = salad; 
+		this.side = null; 
 		this.dessert = null;
 		
 	}
-	public Menu (String name, Side side, Salad salad) {
-		this.name = name;
-		
-		this.entree = null;
-		
-		this.side = side;
-		
-		this.salad = salad;
-		
-		this.dessert = null;
-		
-	}
-	public Menu (String name, Entree entree, Side side, Salad salad, Dessert dessert) {
-		this.name = name;
-		
-		this.entree = entree;
-		
-		this.side = side;
-		
-		this.salad = salad;
-		
+	
+	public Menu(String name, Entree entree, Salad salad, Side side, Dessert dessert) {
+		this.name = name; 
+		this.entree = entree; 
+		this.salad = salad; 
+		this.side = side; 
 		this.dessert = dessert;
-	}
 		
-			
-
-	public double totalCalories() {
-		
-		double totalCalories = 0.0;
-		
-		if (this.entree != null) {
-			
-			totalCalories += this.entree.getCalories();
-			
-		}
-		
-		if (this.side != null) {
-			
-			totalCalories += this.side.getCalories();
-		
-		}
-		if (this.salad != null) {
-			
-			totalCalories += this.salad.getCalories();
-		
-		
-		} 
-		if (this.dessert != null) {
-			
-			totalCalories += this.dessert.getCalories();
-		
-		}
-		return totalCalories;
-	
 	}
 	
-	public String desc() {
-		
-		String desc = " ";
-		
-		desc += this.name;
-		
-		desc += "\n";
-		
-		if (this.entree != null) {
-			
-		
-			desc+= "Entree: " + this.entree.getName() + this.entree.getDesc(); 
-			
-		}else {
-			
-			desc += "Entree: N/A";
 	
-		}
-		desc += "\n";
+	public Menu(String name, Side side, Salad salad) {
+		this.name = name; 
+		this.entree = null; 
+		this.salad = salad; 
+		this.side = side; 
+		this.dessert = null;
+		
+	}
 
-		if (this.side != null) {
-			
-			
-			desc+= "Side: " + this.side.getName() + this.side.getDesc(); 
-			
-		}else {
-			
-			desc += "Side: N/A";
-	
-		}
-		desc += "\n";
 
-		if (this.salad != null) {
-			
-			
-			desc+= "Salad: " + this.salad.getName() + this.salad.getDesc(); 
-			
-		}else {
-			
-			desc += "Salad: N/A";
-	
+	public int totalCalories() {
+		int total = 0;
+		if(this.entree!=null) {
+			total += this.entree.getCalories();
 		}
-		desc += "\n";
+		if(this.salad!=null) {
+			total += this.salad.getCalories();
+		}
+		if(this.side!=null) {
+			total += this.side.getCalories();
+		}
+		if(this.dessert!=null) {
+			total += this.dessert.getCalories();
+		}
+		return total;
+	}
+	
+	public String description(){
+		String description = ""; 
+		description += this.name; 
+		description +="\n"; 
+		
 
-		if (this.dessert != null) {
-			
-			
-			desc+= "Dessert: " + this.dessert.getName() + this.dessert.getDesc(); 
-			
-		}else {
-			
-			desc += "Dessert: N/A";
-	
+		
+		if (this.entree== null) {
+			description += "\n";
+			description += "Entree: N/A ";
 		}
-		desc += "\n";
+		else {
+			description += "\n";
+			description += "Entree: " + this.entree.getName() + ": " + this.entree.getDescription();
+		}
+		if (this.side == null) {
+			description += "\n";
+			description += "Side: N/A ";
+		}
+		else {
+			description += "\n";
+			description += "Side: " + this.side.getName() + ": " + this.side.getDescription();
+		}
+		if (this.salad == null) {
+			description += "\n";
+			description += "Salad: N/A ";
+		}
+		else {
+			description += "\n";
+			description += "Salad: " + this.salad.getName() + ": " + this.salad.getDescription();
+		}
+		if (this.dessert== null) {
+			description += "\n";
+			description += "Dessert: N/A ";
+		}
+		else {
+			description += "\n";
+			description += "Dessert: " + this.dessert.getName() + ": " + this.dessert.getDescription();
+		}
+		//description +="\n"; 
+		return description; 
+			
 		
-		return desc;
-		
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Entree getEntree() {
+		return entree;
+	}
+
+	public void setEntree(Entree entree) {
+		this.entree = entree;
+	}
+
+	public Side getSide() {
+		return side;
+	}
+
+	public void setSide(Side side) {
+		this.side = side;
+	}
+
+	public Salad getSalad() {
+		return salad;
+	}
+
+	public void setSalad(Salad salad) {
+		this.salad = salad;
+	}
+
+	public Dessert getDessert() {
+		return dessert;
+	}
+
+	public void setDessert(Dessert dessert) {
+		this.dessert = dessert;
 	}
 	
 }

@@ -1,24 +1,26 @@
 package mrk129_MenuManager;
 /**
  * Class Salad
- * Author : Mridula Kanakavelan
- * created: 10/14/2022
+ * @author mridulakanakavelan
+ * @created: 11/1/2022
  */
 public class Salad {
 
-	String name;
+	private String name;
 
-	double calories;
+	private int calories;
 
-	String desc;
+	private String description;
+	
+	public Salad() {}
 
-	public Salad(String name, double calories, String desc) {
+	public Salad(String name,  String desc, int calories) {
 
 		this.name = name;
 
 		this.calories = calories;
 
-		this.desc = desc;
+		this.description = desc;
 
 	}
 
@@ -34,16 +36,16 @@ public class Salad {
 		return calories;
 	}
 
-	public void setCalories(double calories) {
+	public void setCalories(int calories) {
 		this.calories = calories;
 	}
 
-	public String getDesc() {
-		return desc;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

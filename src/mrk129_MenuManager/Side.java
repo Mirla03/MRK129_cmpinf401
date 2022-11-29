@@ -2,18 +2,20 @@ package mrk129_MenuManager;
 /**
  * Class Side
  * @author mridulakanakavelan
- * 10/14/2022
+ * @created:11/1/2022
  */
 
 public class Side {
 
 	private String name;
 
-	private double calories;
+	private int calories;
 
 	private String description;
 
-	public Side(String name, String desc, double calories) {
+	public Side() {}
+	
+	public Side(String name, String desc, int calories) {
 
 		this.name = name;
 
@@ -35,7 +37,7 @@ public class Side {
 		return calories;
 	}
 
-	public void setCalories(double calories) {
+	public void setCalories(int calories) {
 		this.calories = calories;
 	}
 
@@ -43,7 +45,7 @@ public class Side {
 		return description;
 	}
 
-	public void setDesc(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 

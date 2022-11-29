@@ -1,25 +1,28 @@
 package mrk129_MenuManager;
 /**
  * Class Dessert
- * Author : Mridula Kanakavelan
- * created: 10/14/2022
+ * @author mridulakanakavelan
+ * @created: 11/1/2022
  */
 
 public class Dessert {
 
-	String name;
+	private String name;
 
-	double calories;
+	private String description;
+	
+	private int calories;
 
-	String desc;
+	
+	public Dessert() {}
 
-	public Dessert(String name, double calories, String desc) {
+	public Dessert(String name, String description, int calories) {
 
 		this.name = name;
 
 		this.calories = calories;
 
-		this.desc = desc;
+		this.description = description;
 
 	}
 
@@ -35,16 +38,16 @@ public class Dessert {
 		return calories;
 	}
 
-	public void setCalories(double calories) {
+	public void setCalories(int calories) {
 		this.calories = calories;
 	}
 
-	public String getDesc() {
-		return desc;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescription(String desc) {
+		this.description = desc;
 	}
 
 }

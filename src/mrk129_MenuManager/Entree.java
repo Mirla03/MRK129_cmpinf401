@@ -1,25 +1,28 @@
 package mrk129_MenuManager;
 /**
  * Class Entree
- * Author : Mridula Kanakavelan
- * created: 10/14/2022
+ * @author mridulakanakavelan
+ * @created: 11/1/2022
  */
 public class Entree {
 	
-	String name;
+	private String name;
+	
+	private int calories;
+	
+	private String description;
+	
+	public Entree() {}
 
-	double calories;
-
-	String desc;
-
-	public Entree(String name, double calories, String desc) {
+	public Entree(String name, String description, int calories) {
 
 		this.name = name;
 
 		this.calories = calories;
 
-		this.desc = desc;
+		this.description = description;
 
+	
 	}
 
 	public String getName() {
@@ -34,16 +37,16 @@ public class Entree {
 		return calories;
 	}
 
-	public void setCalories(double calories) {
+	public void setCalories(int calories) {
 		this.calories = calories;
 	}
 
-	public String getDesc() {
-		return desc;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }
